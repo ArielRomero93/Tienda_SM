@@ -1,0 +1,21 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Editar Factura de Venta  {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        Modificar Factura de Venta
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> Datos de Factura de Venta</h4>
+        {% include 'facturas_ventas/form.html'%}
+
+
+    </div>
+</div>
+
+{% endblock %}
+
+

@@ -1,0 +1,19 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Editar Proveedor  {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        Modificar Proveedor
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> Datos de Proveedores</h4>
+        {% include 'proveedores/form.html'%}
+
+
+    </div>
+</div>
+
+{% endblock %}

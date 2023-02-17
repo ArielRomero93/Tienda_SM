@@ -1,0 +1,19 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Agregar Lineas de Factura de Venta  {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        Crear Lineas Factura de Venta
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> Lineas de Factura de Venta</h4>
+        {% include 'facturas_ventas_lineas/form.html'%}
+
+
+    </div>
+</div>
+
+{% endblock %}

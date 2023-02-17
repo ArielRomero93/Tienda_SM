@@ -1,0 +1,26 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido  %}
+
+<div class="p-5 bg-light">
+    <div class="container">
+        {% if user.is_authenticated %}
+            <h2 class="display-3">{{request.user}}</h2>
+            <h1 class="display-3"> Bienvenido a la Tienda SM </h1>
+            <p class="lead"> Clothes and Shoes</p>
+            <hr class="my-2">
+        {% else %}
+        <h1 class="display-3"> Bienvenidos a la Tienda SM </h1>
+        <p class="lead"> Clothes and Shoes</p>
+        <hr class="my-2">
+        {% endif %}
+
+
+    </div>
+</div>
+
+{% endblock %}
+
+

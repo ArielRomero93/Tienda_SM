@@ -1,0 +1,19 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Editar Pedidos {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        Modificar Pedidos
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> Datos de pedidos</h4>
+        {% include 'pedidos/form.html'%}
+
+
+    </div>
+</div>
+
+{% endblock %}

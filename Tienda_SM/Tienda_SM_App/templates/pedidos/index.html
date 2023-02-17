@@ -1,0 +1,49 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de Pedidos {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear_pedidos' %}" role="button">Agregar nuevo pedido</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Pedidos</h4>
+          <table class="table">
+              <thead>
+              <tr>
+                  <th>Fecha</th>
+                  <th>Proveedor</th>
+                  <th>Producto</th>
+                  <th>Factura</th>
+                  <th>Remito</th>
+                  <th>Acciones</th>
+              </tr>
+              </thead>
+              <tbody>
+
+              {% for pedido in pedidos %}
+              <tr>
+                  <td>{{ pedido.fecha }}</td>
+                  <td>{{ pedido.proveedor }}</td>
+                  <td>{{ pedido.idproducto }}</td>
+                  <td>{{ pedido.factura }}</td>
+                  <td>{{ pedido.remito }}</td>
+
+                  <td>
+                      <a name="" id="" class="btn btn-info" href="{% url 'editar_pedidos' pedido.id %}" role="button">Modificar</a>
+                      |
+                      <a name="" id="" class="btn btn-danger" href="{% url 'eliminar_pedidos' pedido.id %}" role="button">Borrar</a>
+                  </td>
+              </tr>
+
+              {% endfor %}
+              </tbody>
+          </table>
+    </div>
+</div>
+
+{% endblock %}
+
+

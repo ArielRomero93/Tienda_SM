@@ -1,0 +1,21 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Editar Cliente  {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        Modificar Cliente
+    </div>
+    <div class="card-body">
+        <h4 class="card-title"> Datos de Cliente</h4>
+        {% include 'clientes/form.html'%}
+
+
+    </div>
+</div>
+
+{% endblock %}
+
+

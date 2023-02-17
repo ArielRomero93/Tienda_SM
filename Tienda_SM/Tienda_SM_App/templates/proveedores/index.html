@@ -1,0 +1,42 @@
+{% extends "paginas/base.html" %}
+
+{% block titulo %} Lista de Proveedores {% endblock %}
+
+{% block contenido  %}
+
+<div class="card">
+    <div class="card-header">
+        <a name="" id="" class="btn btn-success" href="{% url 'crear_proveedores' %}" role="button">Agregar nuevo proveedor</a>
+    </div>
+    <div class="card-body">
+        <h4 class="card-title">Proveedor</h4>
+          <table class="table">
+              <thead>
+              <th>NumeroDocumento</th>
+              <th>Nombre</th>
+              <th>Teléfono</th>
+              <th>Acciones</th>
+              </thead>
+              <tbody>
+
+              {% for proveedores in proveedores %}
+              <tr>
+                  <td>{{ proveedores.numeroDocumento }}</td>
+                  <td>{{ proveedores.nombre }}</td>
+                  <td>{{ proveedores.telefono }}</td>
+                  <td>
+                      <a name="" id="" class="btn btn-info" href="{% url 'editar_proveedores' proveedores.numeroDocumento %}" role="button">Modificar</a>
+                      |
+                      <a name="" id="" class="btn btn-danger" href="{% url 'eliminar_proveedores' proveedores.numeroDocumento %}" role="button">Borrar</a>
+                  </td>
+              </tr>
+
+              {% endfor %}
+              </tbody>
+          </table>
+    </div>
+</div>
+
+{% endblock %}
+
+
